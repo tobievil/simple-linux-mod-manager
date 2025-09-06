@@ -1,0 +1,3 @@
+[workspace]
+members = ["slmm", "slmm-gui"]
+resolver = "2"
