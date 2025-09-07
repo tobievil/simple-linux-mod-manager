@@ -1,9 +1,11 @@
-use crate::core::models::UuidFlaged;
-use crate::core::models::{GameState, Mod, Profile};
-use crate::core::storage::Storage;
-use crate::error::Result;
-use crate::game_driver::kind::GameDriverKind;
-use crate::game_driver::traits::GameDriver;
+use crate::{
+    core::{
+        models::{GameState, Mod, Profile, UuidFlaged},
+        storage::Storage,
+    },
+    error::Result,
+    game_driver::{kind::GameDriverKind, traits::GameDriver},
+};
 use fs_extra::dir::{CopyOptions, copy, remove};
 use std::fs;
 use std::path::{Path, PathBuf};

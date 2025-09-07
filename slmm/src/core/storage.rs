@@ -1,5 +1,4 @@
-use crate::core::models::GameState;
-use crate::error::Result;
+use crate::{core::models::GameState, error::Result};
 use std::fs;
 use std::path::PathBuf;
 

@@ -5,17 +5,6 @@ use uuid::Uuid;
 
 use crate::game_driver::kind::GameDriverKind;
 
-pub trait HasUuid {
-    fn uuid(&self) -> Uuid;
-
-    fn find_by_uuid(vec: Vec<Self>) -> Option<Self>
-    where
-        Self: Sized,
-    {
-        vec.into_iter().next()
-    }
-}
-
 #[derive(Debug, Serialize, Deserialize)]
 pub struct UuidFlaged {
     pub uuid: Uuid,
@@ -39,12 +28,6 @@ impl Mod {
             notes,
             install_path,
         }
-    }
-}
-
-impl HasUuid for Mod {
-    fn uuid(&self) -> Uuid {
-        self.uuid
     }
 }
 
